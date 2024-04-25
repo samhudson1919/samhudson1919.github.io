@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom</title>
+    <style>
+        body {
+            background-color: black; /* Dark background color */
+            color: #f0f0f0;           /* Light text color for contrast */
+        }
+        .zoom-container {
+            text-align: center;
+        }
+
+        .zoom-image {
+            transition: transform 1.5s ease;
+            transform: scale(0.1); /* Start image at 80% of its size */
+        }
+
+        .zoom-image.zoomed {
+            transform: scale(1);  /* Zoom the image to its default size (100%) */
+        }
+        .button-container {
+            display: flex;
+            align-items: center;      /* Vertical centering */
+            justify-content: space-between; /* Space evenly between buttons */
+            justify-content: center;  /* Horizontal centering */
+            height: 7vh;            /* Make the container take full screen height */
+        }
+        .button {
+            background-color: white; /* Example color */
+            color: black;
+            padding: 5px 5px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 2em;
+            display: inline-block;
+            border-radius: 5px;        /* Rounded corners */
+            cursor: pointer;           /* Mouse pointer changes to a hand */
+        }
+        .content {
+            padding: 0px;
+        }
+
+        header {
+            text-align: Center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+        h2{
+            font-size: 2em;
+        }
+        h2{
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="zoom-container">
+        <img class="zoom-image" src="Copper_Alkemy_Symbol_black.jpg" alt="My Image">
+    </div>
+    <div class="content">
+        <header>
+            <h1>Samuel Hudson</h1>
+            <h2>samuel.taylor.hudson@gmail.com<br></br></h2>
+        </header>
+    </div>
+    <div class="button-container">
+        <h2>Resume&#58</h2> <a href=https://drive.google.com/file/d/1BQEXUQuSMfdFOVj7B-bOQqGf1buHL2vh/view?usp=drive_link" class="button">PDF</a> <a href="https://www.google.com>" class="button">Web-View</a>
+    </div>
+    <script>
+        window.onload = function() {
+            document.querySelector('.zoom-image').classList.add('zoomed');
+        };
+    </script>
+</body>
+</html>
